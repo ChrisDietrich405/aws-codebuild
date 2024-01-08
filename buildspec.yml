@@ -1,0 +1,17 @@
+version: 0.1
+phases: 
+  install:
+    runtime-versions: 
+      nodejs: 18
+  prebuild:
+    commands:
+      - npm install
+  build: 
+    commands: 
+      - npm build 
+
+artifacts: 
+  files: 
+    - "**/*"
+  base-directory: "dist"
+
