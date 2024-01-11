@@ -9,7 +9,9 @@ phases:
   build: 
     commands: 
       - npm run build 
-
+  post_build: 
+    commands: 
+      - aws s3 sync dist/ s3://anotherbucket222/
 artifacts: 
   files: 
     - "**/*"
