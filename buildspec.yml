@@ -1,19 +1,18 @@
 version: 0.2
-phases: 
+phases:
   install:
-    runtime-versions: 
+    runtime-versions:
       nodejs: 18
   pre_build:
     commands:
       - npm install
-  build: 
-    commands: 
-      - npm run build 
-  post_build: 
-    commands: 
-      - aws s3 sync dist/ s3://anotherbucket222/
-artifacts: 
-  files: 
+  build:
+    commands:
+      - npm run build
+  post_build:
+    commands:
+      - aws s3 sync dist/ s3://awsbucket333333/folder/
+artifacts:
+  files:
     - "**/*"
   base-directory: "dist"
-
