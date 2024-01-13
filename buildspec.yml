@@ -1,6 +1,6 @@
 version: 0.2
 phases:
-  install:
+  install:   
     runtime-versions:
       nodejs: 18
   pre_build:
@@ -11,7 +11,7 @@ phases:
       - npm run build
   post_build:
     commands:
-      - aws s3 sync dist/ s3://awsbucket333333/folder/
+      - aws s3 sync dist/ s3://codebuild-practice1111/aws-codebuild/
 artifacts:
   files:
     - "**/*"
