@@ -11,7 +11,7 @@ phases:
       - npm run build
   post_build:
     commands:
-      - aws s3 sync dist/ s3://codebuild-practice1111/aws-codebuild/
+      - aws s3 sync dist/ s3://aws-codebuild-jhonson/aws-codebuild-folder/
 artifacts:
   files:
     - "**/*"
