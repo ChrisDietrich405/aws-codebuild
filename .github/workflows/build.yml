@@ -8,16 +8,16 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-  steps:
-    - name: checkout-repository
-      uses: actions/checkout@v2 #define github version
-    - name: setup-aws
-      uses: aws-actions/configure-aws-credentials@v1 #defines aws credentials version
-      with:
-        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        aws-secret-access-key: ${{secrets.AWS_SECRET_ACCESS_KEY}}
-        aws-region: us-east-1
-    - name: run-code-build
-      run: |
-          aws codebuild start-build --project-name aws-codebuild11111
+    steps:
+      - name: checkout-repository
+        uses: actions/checkout@v2 #define github version
+      - name: setup-aws
+        uses: aws-actions/configure-aws-credentials@v1 #defines aws credentials version
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{secrets.AWS_SECRET_ACCESS_KEY}}
+          aws-region: us-east-1
+      - name: run-code-build
+        run: |
+            aws codebuild start-build --project-name aws-codebuild11111
 
