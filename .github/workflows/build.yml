@@ -19,5 +19,5 @@ jobs:
           aws-region: us-east-1
       - name: run-code-build
         run: |
-            aws codebuild start-build --project-name aws-codebuild11111
+            aws codebuild start-build --project-name react
 
