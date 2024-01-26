@@ -7,11 +7,11 @@ phases:
     commands:
       - npm install
   build:
-    commands:
+    commands: 
       - npm run build
   post_build:
     commands:
-      - aws s3 sync dist/ s3://codebuildbucket11
+      - aws s3 sync dist/ s3://awscodebuilds3project
 artifacts:
   files:
     - "**/*"
